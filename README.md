@@ -325,35 +325,6 @@ npm run build                           # Build production
 - **Storage** : AWS S3 ou équivalent
 - **Monitoring** : Sentry + Grafana
 
-### Configuration production
-```bash
-# Variables environnement
-DEBUG=False
-ALLOWED_HOSTS=jobgate.ma,api.jobgate.ma
-SECRET_KEY=super-secure-production-key
-
-# Database
-DB_HOST=production-db-host
-DB_PASSWORD=secure-production-password
-
-# Media Storage
-MEDIA_URL=https://cdn.jobgate.ma/media/
-AWS_S3_BUCKET=jobgate-media-production
-
-# Email
-EMAIL_HOST=smtp.mailgun.org
-EMAIL_HOST_USER=notifications@jobgate.ma
-```
-
-### Scripts déploiement
-```bash
-# Build et deploy
-./deploy/build.sh                       # Build complet
-./deploy/migrate.sh                     # Migrations production
-./deploy/collect-static.sh              # Fichiers statiques
-./deploy/restart-services.sh            # Restart services
-```
-
 ## 📈 Analytics et monitoring
 
 ### Métriques business
